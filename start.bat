@@ -1,0 +1,6 @@
+@echo off
+echo Starting Genshin Treasure Tracker...
+echo Opening browser...
+start http://localhost:5173
+call npm run dev
+pause

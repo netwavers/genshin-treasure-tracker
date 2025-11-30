@@ -1,10 +1,32 @@
-# React + Vite
+# Genshin Treasure Tracker
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+原神の「宝箱」「仙霊」「雷霊」「時間制限挑戦」の収集状況を追跡するWebアプリケーションです。
 
-Currently, two official plugins are available:
+## 機能
+- 全エリア（モンド〜ナタ）の収集数管理
+- 残数と進捗率の自動計算
+- ブラウザへのデータ自動保存
+- 画像保存機能
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
+## 使用方法
+
+### インストール
+1. `setup.bat` をダブルクリックして実行してください。必要なライブラリがインストールされます。
+
+### 起動
+1. `start.bat` をダブルクリックして実行してください。
+2. 自動的にブラウザが立ち上がり、アプリが表示されます。
+
+## 手動での実行方法
+もしバッチファイルが動かない場合は、以下のコマンドで実行できます。
+
+```bash
+# インストール
+npm install
+
+# 起動
+npm run dev
+```
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
 ## React Compiler
