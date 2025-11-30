@@ -48,6 +48,13 @@ echo Installing dependencies...
 call npm install
 
 echo.
+echo Creating desktop shortcuts...
+set "TARGET_DIR=%CD%"
+powershell -Command "$ws = New-Object -ComObject WScript.Shell; $s = $ws.CreateShortcut([System.IO.Path]::Combine([System.Environment]::GetFolderPath('Desktop'), '原神チェッカー起動.lnk')); $s.TargetPath = '%TARGET_DIR%\start.bat'; $s.WorkingDirectory = '%TARGET_DIR%'; $s.Save()"
+powershell -Command "$ws = New-Object -ComObject WScript.Shell; $s = $ws.CreateShortcut([System.IO.Path]::Combine([System.Environment]::GetFolderPath('Desktop'), '原神チェッカー更新.lnk')); $s.TargetPath = '%~f0'; $s.WorkingDirectory = '%~dp0'; $s.Save()"
+echo Shortcuts created on Desktop.
+
+echo.
 echo Setup complete!
-echo You can now run start.bat to launch the application.
+echo You can now use the '原神チェッカー起動' shortcut on your desktop to launch the application.
 pause
